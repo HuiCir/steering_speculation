@@ -107,20 +107,3 @@ similarity_threshold: 0.5 # Trigger prompt fallback
 deliver_mode: ensemble    # ensemble | best_diverse | single
 ```
 
-### Key Results (10 samples, Qwen3.5-2B, RTX 3070)
-
-| Method | Jaccard Div | ROUGE-L | Time |
-|--------|:---:|:---:|------|
-| Batch (baseline) | 0.643 | 0.143 | ~7s |
-| SPREAD | 0.632 | 0.140 | ~7s |
-| Spread+Prompt | 0.696 | 0.141 | ~7s |
-| **COMBINED** | **0.702** | 0.147 | ~7s |
-
-- **+9% diversity vs Batch**, with quality preserved (ROUGE-L unchanged)
-- **Zero overhead**: prompt fallback triggers < 0.5 times per case
-- **Adaptive branch count**: reduces from 4→1 in template phases, keeps 4 in analysis phases
-
-
-### License
-
-MIT
