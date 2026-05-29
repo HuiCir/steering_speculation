@@ -1,0 +1,19 @@
+# Steering-Speculation Default Configuration
+num_candidates: 4
+max_new_tokens: 200
+temperature: 0.7
+top_p: 0.9
+
+# SPREAD steering
+steer_layer: 8
+base_calpha: 0.3
+recalc_every: 20
+T_riemann: 10
+
+# Prompt fallback
+similarity_threshold: 0.5
+
+# Delivery
+deliver_mode: ensemble  # ensemble | best_diverse | single
+
+seed: 42
